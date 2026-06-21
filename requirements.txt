@@ -1,5 +1,6 @@
 tensorflow
-pandas
 numpy
-scikit-learn
+pandas
 matplotlib
+scikit-learn
+jupyter
