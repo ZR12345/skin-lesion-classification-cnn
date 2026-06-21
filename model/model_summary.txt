@@ -1,0 +1,75 @@
+Model Name: custom_medium_no_lambda
+
+Input Shape:
+(224, 224, 3)
+
+Architecture Components:
+
+* Convolutional Neural Network Backbone
+* Residual Learning Blocks
+* CBAM (Convolutional Block Attention Module)
+* Multi-Head Self-Attention Layer
+* Feed Forward Transformer Block
+* Global Average Pooling
+* Fully Connected Classification Head
+
+Feature Extraction Pipeline:
+Input (224×224×3)
+→ Conv2D(32)
+→ BatchNorm
+→ ReLU
+→ MaxPooling
+
+Stage 1:
+→ Residual Block (64 filters)
+→ CBAM Attention
+→ Residual Block (64 filters)
+
+Stage 2:
+→ MaxPooling
+→ Residual Block (128 filters)
+→ CBAM Attention
+→ Residual Block (128 filters)
+→ CBAM Attention
+
+Attention Module:
+→ Layer Normalization
+→ Multi-Head Self-Attention
+→ Residual Connection
+→ Feed Forward Network
+→ Residual Connection
+
+Stage 3:
+→ Residual Block (256 filters)
+→ CBAM Attention
+
+Classification Head:
+→ Global Average Pooling
+→ Dropout
+→ Dense(256)
+→ Dropout
+→ Dense(1, Sigmoid)
+
+Model Statistics:
+Total Parameters      : 1,813,023
+Trainable Parameters  : 1,809,503
+Non-Trainable Params  : 3,520
+
+Input Resolution:
+224 × 224 × 3
+
+Output:
+Binary Classification Probability
+
+Key Features:
+
+* Residual Connections
+* CBAM Channel Attention
+* CBAM Spatial Attention
+* Multi-Head Self-Attention
+* Transformer Feed-Forward Block
+* Dropout Regularization
+* Batch Normalization
+
+Framework:
+TensorFlow / Keras
