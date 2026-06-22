@@ -155,6 +155,4 @@ This project is intended for educational and research purposes only and should n
 
 ---
 
-## Disclaimer
-
 Author: Zaed Rizwan
